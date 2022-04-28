@@ -15,7 +15,7 @@ def is_unique_without_data_structures(string: str) -> bool:
 def main():
     string = input('Enter a string: ')
 
-    if is_unique_without_data_structures(string):
+    if is_unique(string):
         print('All characters are unique')
     else:
         print('Not all characters are unique')
