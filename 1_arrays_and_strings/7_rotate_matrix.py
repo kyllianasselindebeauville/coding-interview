@@ -3,6 +3,17 @@
 from typing import List
 
 def rotate(matrix: List[List[int]]) -> None:
+    """Rotates an integer matrix by 90 degrees.
+
+    Iterates through each cell and assign the value of another cell to rotate
+    the matrix.
+
+    Args:
+        matrix: An N x N matrix of integers.
+
+    Returns:
+        None.
+    """
     size = len(matrix)
     rotated = [[None for _ in range(size)] for _ in range(size)]
     for i in range(size):

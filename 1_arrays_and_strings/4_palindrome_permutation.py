@@ -1,6 +1,18 @@
 # 1.4 Palindrome Permutation
 
 def is_permutation_of_palindrome(string: str) -> bool:
+    """Determines if a string is a permutation of a palindrome.
+
+    Counts the number of occurences of each character to determine if the
+    string is a permutation of a palindrome.
+
+    Args:
+        string: A string.
+
+    Returns:
+        A boolean equal to True if the string is a permutation of a palindrome,
+        False otherwise.
+    """
     chars = dict()
     for c in string.lower():
         chars[c] = chars.get(c, 0) + 1
