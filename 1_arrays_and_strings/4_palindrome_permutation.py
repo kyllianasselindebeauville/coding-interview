@@ -14,10 +14,13 @@ def is_permutation_of_palindrome(string: str) -> bool:
         False otherwise.
     """
     chars = dict()
+
     for c in string.lower():
         chars[c] = chars.get(c, 0) + 1
+
     odd_chars = dict(filter(lambda x: x[0].isalpha() and x[1] & 1, chars.items()))
     return len(odd_chars) <= 1
+
 
 def main():
     string = input('Enter a string: ')
@@ -26,6 +29,7 @@ def main():
         print('Permutation of a palindrome')
     else:
         print('Not a permutation of a palindrome')
+
 
 if __name__ == '__main__':
     main()

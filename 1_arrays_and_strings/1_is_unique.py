@@ -14,6 +14,7 @@ def is_unique(string: str) -> bool:
     """
     return len(string) == len(set(string))
 
+
 def is_unique_without_data_structures(string: str) -> bool:
     """Determines if a string has all unique characters.
 
@@ -27,12 +28,15 @@ def is_unique_without_data_structures(string: str) -> bool:
         A boolean equal to True if all characters are unique, False otherwise.
     """
     bits = 0
+
     for char in string:
         shift = ord(char)
         if bits & (1 << shift):
             return False
         bits |= (1 << shift)
+
     return True
+
 
 def main():
     string = input('Enter a string: ')
@@ -41,6 +45,7 @@ def main():
         print('All characters are unique')
     else:
         print('Not all characters are unique')
+
 
 if __name__ == '__main__':
     main()
