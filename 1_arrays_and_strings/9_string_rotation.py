@@ -3,7 +3,7 @@
 def is_substring(string: str, substring: str):
     """Checks if a string is a substring of another string.
 
-    Uses the string find() method to check if the substring is in the string.
+    Uses the str find() method to check if the substring is in the string.
 
     Args:
         string: A string.

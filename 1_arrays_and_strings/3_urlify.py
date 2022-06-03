@@ -3,7 +3,7 @@
 def urlify(string: str) -> str:
     """Replaces spaces of a string with %20 .
 
-    Uses the string replace() method to urlify the string.
+    Uses the str replace() method to urlify the string.
 
     Args:
         string: A string.
