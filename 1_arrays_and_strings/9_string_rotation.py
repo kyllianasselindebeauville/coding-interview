@@ -1,6 +1,6 @@
 # 1.9 String Rotation
 
-def is_substring(string: str, substring: str):
+def is_substring(string: str, substring: str) -> bool:
     """Checks if a string is a substring of another string.
 
     Uses the str find() method to check if the substring is in the string.
@@ -16,7 +16,7 @@ def is_substring(string: str, substring: str):
     return string.find(substring) != -1
 
 
-def is_rotation(string1: str, string2: str):
+def is_rotation(string1: str, string2: str) -> bool:
     """Checks if the second string is a rotation of the first one.
 
     Checks if the second string is a substring of 2 times the first string to
