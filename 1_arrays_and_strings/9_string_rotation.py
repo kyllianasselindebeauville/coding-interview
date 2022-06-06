@@ -1,21 +1,5 @@
 # 1.9 String Rotation
 
-def is_substring(string: str, substring: str) -> bool:
-    """Checks if a string is a substring of another string.
-
-    Uses the str find() method to check if the substring is in the string.
-
-    Args:
-        string: A string.
-        substring: A substring to look for.
-
-    Returns:
-        A boolean equals to True if the substring is really one, False
-        otherwise.
-    """
-    return string.find(substring) != -1
-
-
 def is_rotation(string1: str, string2: str) -> bool:
     """Checks if the second string is a rotation of the first one.
 
@@ -34,6 +18,22 @@ def is_rotation(string1: str, string2: str) -> bool:
         return is_substring(2 * string1, string2)
 
     return False
+
+
+def is_substring(string: str, substring: str) -> bool:
+    """Checks if a string is a substring of another string.
+
+    Uses the str find() method to check if the substring is in the string.
+
+    Args:
+        string: A string.
+        substring: A substring to look for.
+
+    Returns:
+        A boolean equals to True if the substring is really one, False
+        otherwise.
+    """
+    return string.find(substring) != -1
 
 
 def main():
