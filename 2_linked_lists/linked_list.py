@@ -1,3 +1,5 @@
+# Linked List
+
 class LinkedListNode:
     def __init__(self, data, next=None, prev=None):
         self.data = data
@@ -6,3 +8,8 @@ class LinkedListNode:
 
     def __str__(self):
         return str(self.data)
+
+
+class LinkedList:
+    def __init__(self):
+        pass
