@@ -11,5 +11,38 @@ class LinkedListNode:
 
 
 class LinkedList:
-    def __init__(self):
-        pass
+    def __init__(self, values=None):
+        self.head = None
+        self.tail = None
+        if values is not None:
+            for v in values:
+                self.append(v)
+
+    def __iter__(self):
+        current = self.head
+        while current:
+            yield current
+            current = current.next
+
+    def __len__(self):
+        cnt, current = 0, self.head
+        while current:
+            cnt += 1
+            current = current.next
+        return cnt
+
+    def __str__(self):
+        return ' -> '.join([str(x) for x in self])
+
+    def add(self, value):
+        if self.head is None:
+            self.head = self.tail = LinkedListNode(value)
+        else:
+            self.head = LinkedListNode(value, self.head)
+
+    def append(self, value):
+        if self.head is None:
+            self.head = self.tail = LinkedListNode(value)
+        else:
+            self.tail.next = LinkedListNode(value)
+            self.tail = self.tail.next
