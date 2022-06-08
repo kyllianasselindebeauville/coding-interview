@@ -38,11 +38,30 @@ class LinkedList:
         if self.head is None:
             self.head = self.tail = LinkedListNode(value)
         else:
-            self.head = LinkedListNode(value, self.head)
+            self.head = LinkedListNode(value, next=self.head)
 
     def append(self, value):
         if self.head is None:
             self.head = self.tail = LinkedListNode(value)
         else:
             self.tail.next = LinkedListNode(value)
+            self.tail = self.tail.next
+
+
+class DoublyLinkedList(LinkedList):
+    def __str__(self):
+        return ' <-> '.join([str(x) for x in self])
+
+    def add(self, value):
+        if self.head is None:
+            self.head = self.tail = LinkedListNode(value)
+        else:
+            self.head.prev = LinkedListNode(value, next=self.head)
+            self.head = self.head.prev
+
+    def append(self, value):
+        if self.head is None:
+            self.head = self.tail = LinkedListNode(value)
+        else:
+            self.tail.next = LinkedListNode(value, prev=self.tail)
             self.tail = self.tail.next
