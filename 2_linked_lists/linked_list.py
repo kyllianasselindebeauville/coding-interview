@@ -34,6 +34,12 @@ class LinkedList:
     def __str__(self):
         return ' -> '.join([str(x) for x in self])
 
+    def __add__(self, other):
+        return self.__class__([x.data for x in self] + list(other))
+
+    def __radd__(self, other):
+        return self.__class__(list(other) + [x.data for x in self])
+
     def add(self, value):
         if self.head is None:
             self.head = self.tail = LinkedListNode(value)
