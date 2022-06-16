@@ -1,7 +1,18 @@
 # Linked List
 
 class LinkedListNode:
+    """The node of a linked list or a doubly linked list.
+
+    https://en.wikipedia.org/wiki/Node_(computer_science)
+
+    Attributes:
+        data: Data contained in the node.
+        next: Next node.
+        prev: Previous node.
+    """
+
     def __init__(self, data, next=None, prev=None):
+        """Inits LinkedListNode with data and possibly the next and/or the previous node."""
         self.data = data
         self.next = next
         self.prev = prev
@@ -11,7 +22,17 @@ class LinkedListNode:
 
 
 class LinkedList:
+    """The linked list data structure.
+
+    https://en.wikipedia.org/wiki/Linked_list
+
+    Attributes:
+        head: First node of the linked list.
+        tail: Last node of the linked list.
+    """
+
     def __init__(self, values=None):
+        """Inits LinkedList with some values."""
         self.head = None
         self.tail = None
         if values is not None:
@@ -41,12 +62,14 @@ class LinkedList:
         return self.__class__(list(other) + [x.data for x in self])
 
     def add(self, value):
+        """Inserts an element at the beginning of the linked list."""
         if self.head is None:
             self.head = self.tail = LinkedListNode(value)
         else:
             self.head = LinkedListNode(value, next=self.head)
 
     def append(self, value):
+        """Inserts an element at the end of the linked list."""
         if self.head is None:
             self.head = self.tail = LinkedListNode(value)
         else:
@@ -55,10 +78,20 @@ class LinkedList:
 
 
 class DoublyLinkedList(LinkedList):
+    """The doubly linked list data structure.
+
+    https://en.wikipedia.org/wiki/Doubly_linked_list
+
+    Attributes:
+        head: First node of the doubly linked list.
+        tail: Last node of the doubly linked list.
+    """
+
     def __str__(self):
         return ' <-> '.join([str(x) for x in self])
 
     def add(self, value):
+        """Inserts an element at the beginning of the doubly linked list."""
         if self.head is None:
             self.head = self.tail = LinkedListNode(value)
         else:
@@ -66,6 +99,7 @@ class DoublyLinkedList(LinkedList):
             self.head = self.head.prev
 
     def append(self, value):
+        """Inserts an element at the end of the doubly linked list."""
         if self.head is None:
             self.head = self.tail = LinkedListNode(value)
         else:
