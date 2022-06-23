@@ -76,6 +76,18 @@ class LinkedList:
             self.tail.next = LinkedListNode(value)
             self.tail = self.tail.next
 
+    def input(self):
+        """Prompts the user to insert multiple elements of the linked list."""
+        print('Enter the elements of the linked list, then press Enter: ')
+
+        while True:
+            input_ = input()
+
+            if input_:
+                self.append(input_)
+            else:
+                break
+
 
 class DoublyLinkedList(LinkedList):
     """The doubly linked list data structure.

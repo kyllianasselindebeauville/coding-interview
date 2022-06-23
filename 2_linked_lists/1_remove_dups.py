@@ -52,18 +52,10 @@ def remove_dups_followup(ll):
 
 
 def main():
-    print('Enter the elements of the linked list, then press Enter: ')
     ll = LinkedList()
-
-    while True:
-        input_ = input()
-
-        if input_:
-            ll.append(input_)
-        else:
-            break
-
+    ll.input()
     print(ll)
+
     remove_dups(ll)
     print(ll)
 

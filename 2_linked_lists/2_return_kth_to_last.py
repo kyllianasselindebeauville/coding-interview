@@ -53,18 +53,10 @@ def kth_to_last_with_len(ll, k):
 
 
 def main():
-    print('Enter the elements of the linked list, then press Enter: ')
     ll = LinkedList()
-
-    while True:
-        input_ = input()
-
-        if input_:
-            ll.append(input_)
-        else:
-            break
-
+    ll.input()
     print(ll)
+
     k = int(input('Enter the value of K: '))
     print(f'The {k}th to last element is {kth_to_last(ll, k)}')
 
