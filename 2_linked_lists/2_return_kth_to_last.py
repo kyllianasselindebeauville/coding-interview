@@ -44,12 +44,10 @@ def kth_to_last_with_len(ll, k):
     """
     length = len(ll)
 
-    if k <= 0 or k > length:
-        return None
-
-    for index, current in enumerate(ll):
-        if index == length - k:
-            return current
+    if 0 < k <= length:
+        for index, current in enumerate(ll):
+            if index == length - k:
+                return current
 
 
 def main():
