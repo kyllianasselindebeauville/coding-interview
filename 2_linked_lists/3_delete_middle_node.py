@@ -14,7 +14,7 @@ def delete_node(node):
     Returns:
         None.
     """
-    if node != None and node.next != None:
+    if node is not None and node.next is not None:
         node.data, node.next = node.next.data, node.next.next
 
 
