@@ -78,7 +78,7 @@ class LinkedList:
 
     def input(self, type=str):
         """Prompts the user to insert multiple elements to the linked list."""
-        print('Enter the elements of the linked list, then press Enter: ')
+        print(f'Enter the elements ({type.__name__}) of the linked list, then press Enter: ')
 
         while True:
             try:
