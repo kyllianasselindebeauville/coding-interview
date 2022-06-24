@@ -18,21 +18,23 @@ def palindrome(ll):
 
 
 def palindrome_with_stack(ll):
-    runner, stack = ll.head, list()
+    current = runner = ll.head
+    stack = list()
 
-    for current in ll:
-        if runner and runner.next:
-            stack.append(current.data)
-            runner = runner.next.next
+    while runner and runner.next:
+        stack.append(current.data)
+        current, runner = current.next, runner.next.next
 
-        elif runner:
-            runner = runner.next
+    if runner:
+        current = current.next
 
-        else:
-            top = stack.pop()
+    while current:
+        top = stack.pop()
 
-            if current.data != top:
-                return False
+        if current.data != top:
+            return False
+
+        current = current.next
 
     return True
 
