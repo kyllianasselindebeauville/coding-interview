@@ -27,8 +27,10 @@ def main():
     ll2.input()
     ll3.input()
 
-    ll1.tail.next, ll1.tail = ll3.head, ll3.head
-    ll2.tail.next, ll2.tail = ll3.head, ll3.head
+    if ll1.tail is not None:
+        ll1.tail.next, ll1.tail = ll3.head, ll3.head
+    if ll2.tail is not None:
+        ll2.tail.next, ll2.tail = ll3.head, ll3.head
 
     print(ll1)
     print(ll2)
