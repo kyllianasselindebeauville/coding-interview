@@ -48,7 +48,7 @@ def main():
     ll1.input(int)
     ll2.input(int)
 
-    print(ll1, '+', ll2, '=', sum_lists_followup(ll1,ll2), sep='\n')
+    print(ll1, '+', ll2, '=', sum_lists_followup(ll1, ll2), sep='\n')
 
 
 if __name__ == '__main__':
