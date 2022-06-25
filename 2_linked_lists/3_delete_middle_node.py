@@ -25,7 +25,7 @@ def main():
 
     index = int(input('Enter the index of the node you want to delete: '))
     if 0 <= index < len(ll):
-        node = eval('ll.head' + ''.join('.next' for _ in range(index)))
+        node = eval('ll.head' + '.next' * index)
     else:
         node = None
 
