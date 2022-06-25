@@ -35,6 +35,7 @@ class LinkedList:
         """Inits LinkedList with some values."""
         self.head = None
         self.tail = None
+
         if values is not None:
             for v in values:
                 self.append(v)
@@ -46,11 +47,7 @@ class LinkedList:
             current = current.next
 
     def __len__(self):
-        cnt, current = 0, self.head
-        while current:
-            cnt += 1
-            current = current.next
-        return cnt
+        return len([_ for _ in self])
 
     def __str__(self):
         return ' -> '.join([str(x) for x in self])
