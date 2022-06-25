@@ -51,8 +51,7 @@ def kth_to_last_with_len(ll, k):
 
 
 def main():
-    ll = LinkedList()
-    ll.input()
+    ll = LinkedList().input()
     print(ll)
 
     k = int(input('Enter the value of K: '))

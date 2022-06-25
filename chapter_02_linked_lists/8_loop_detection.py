@@ -24,9 +24,7 @@ def loop_detection(ll):
 
 
 def main():
-    ll1, ll2 = LinkedList(), LinkedList()
-    ll1.input()
-    ll2.input()
+    ll1, ll2 = LinkedList().input(), LinkedList().input()
 
     if ll1.head is None:
         ll1.head = ll1.tail = ll2.head

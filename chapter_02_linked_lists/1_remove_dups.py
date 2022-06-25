@@ -52,8 +52,7 @@ def remove_dups_followup(ll):
 
 
 def main():
-    ll = LinkedList()
-    ll.input()
+    ll = LinkedList().input()
     print(ll)
 
     remove_dups(ll)

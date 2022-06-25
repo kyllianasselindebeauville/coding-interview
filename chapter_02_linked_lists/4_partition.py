@@ -20,8 +20,7 @@ def partition(ll, x):
 
 
 def main():
-    ll = LinkedList()
-    ll.input(int)
+    ll = LinkedList().input(int)
     print(ll)
 
     x = int(input('Enter the value of X: '))

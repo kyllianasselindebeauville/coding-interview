@@ -40,8 +40,7 @@ def palindrome_with_stack(ll):
 
 
 def main():
-    ll = LinkedList()
-    ll.input()
+    ll = LinkedList().input()
 
     if palindrome_with_stack(ll):
         print(f'{ll} is a palindrome')

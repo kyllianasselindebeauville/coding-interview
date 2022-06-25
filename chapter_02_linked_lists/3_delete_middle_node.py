@@ -19,8 +19,7 @@ def delete_node(node):
 
 
 def main():
-    ll = LinkedList()
-    ll.input()
+    ll = LinkedList().input()
     print(ll)
 
     index = int(input('Enter the index of the node you want to delete: '))

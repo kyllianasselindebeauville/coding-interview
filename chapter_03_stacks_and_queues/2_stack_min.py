@@ -28,9 +28,7 @@ class StackMin(Stack):
 
 
 def main():
-    stack = StackMin()
-    stack.input(int)
-
+    stack = StackMin().input(int)
     print(stack)
     print(f'The minimum is: {stack.min()}')
 

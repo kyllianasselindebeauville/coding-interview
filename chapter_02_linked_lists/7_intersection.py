@@ -22,10 +22,7 @@ def intersection(ll1, ll2):
 
 
 def main():
-    ll1, ll2, ll3 = LinkedList(), LinkedList(), LinkedList()
-    ll1.input()
-    ll2.input()
-    ll3.input()
+    ll1, ll2, ll3 = LinkedList().input(), LinkedList().input(), LinkedList().input()
 
     if ll1.tail is not None:
         ll1.tail.next, ll1.tail = ll3.head, ll3.head

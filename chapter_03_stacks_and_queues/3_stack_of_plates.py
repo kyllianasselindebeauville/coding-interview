@@ -68,12 +68,10 @@ class SetOfStacks:
 def main():
     capacity = int(input('Enter the capacity of a stack: '))
     stack = SetOfStacks(Stack().input(), capacity)
-
     print(stack)
 
     index = int(input('Enter the index of the stack from which you want to pop an item: '))
     stack.pop_at(index)
-
     print(stack)
 
 
