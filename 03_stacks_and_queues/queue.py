@@ -34,3 +34,17 @@ class Queue:
 
     def is_empty(self):
         return len(self.items) == 0
+
+    def input(self, type=str):
+        print(f'Enter the elements ({type.__name__}) of the queue, then press Enter: ')
+
+        while True:
+            try:
+                input_ = eval(f'{type.__name__}(input())')
+            except:
+                break
+
+            if input_ == '':
+                break
+
+            self.add(input_)
