@@ -82,6 +82,8 @@ class LinkedList:
 
             self.append(input_)
 
+        return self
+
 
 class DoublyLinkedList(LinkedList):
     """The doubly linked list data structure.

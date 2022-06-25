@@ -48,3 +48,5 @@ class Queue:
                 break
 
             self.add(input_)
+
+        return self

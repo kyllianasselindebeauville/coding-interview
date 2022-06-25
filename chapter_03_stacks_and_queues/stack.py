@@ -48,3 +48,5 @@ class Stack:
                 break
 
             self.push(input_)
+
+        return self
