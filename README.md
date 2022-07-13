@@ -5,7 +5,7 @@ Practice of some coding problems in Python:
 1. [Arrays and Strings](01_arrays_and_strings)
 2. [Linked Lists](02_linked_lists)
 3. [Stacks and Queues](03_stacks_and_queues)
-4. Trees and Graphs
+4. [Trees and Graphs](04_trees_and_graphs)
 5. Bit Manipulation
 6. Math and Logic Puzzles
 7. Object-Oriented Design
