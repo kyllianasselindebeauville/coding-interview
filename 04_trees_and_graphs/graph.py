@@ -17,5 +17,8 @@ class Graph:
             for node in adjacency_list:
                 self.nodes[node] = GraphNode(node)
 
-            for node, neighbors in adjacency_list.items():
-                self.nodes[node].neighbors.extend([self.nodes[n] for n in neighbors])
+            for current, neighbors in adjacency_list.items():
+                for n in neighbors:
+                    if (n in self.nodes and
+                        self.nodes[n] not in self.nodes[current].neighbors):
+                        self.nodes[current].neighbors.append(self.nodes[n])
