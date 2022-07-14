@@ -4,6 +4,9 @@ from graph import Graph
 
 
 def route_between_nodes(graph, source, destination):
+    if source not in graph.nodes or destination not in graph.nodes:
+        return False
+
     queue, visited = [graph.nodes[source]], set()
 
     while len(queue) > 0:
