@@ -1,7 +1,7 @@
 # Graph
 
 class GraphNode:
-    def __init__(self, data=None, neighbors=None):
+    def __init__(self, data, neighbors=None):
         self.data = data
         self.neighbors = neighbors if neighbors is not None else []
 
