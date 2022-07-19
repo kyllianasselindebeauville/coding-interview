@@ -14,10 +14,10 @@ def multiply(a, b):
 
     half = multiply(a >> 1, b)
 
-    if a % 2 == 0:
-        return half + half
-    else:
+    if a & 1:
         return half + half + b
+    else:
+        return half + half
 
 
 class Test(unittest.TestCase):
