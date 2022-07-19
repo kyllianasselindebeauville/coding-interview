@@ -17,7 +17,7 @@ Practice of some coding problems in Python:
 13. Java
 14. Databases
 15. Threads and Locks
-16. Moderate
+16. [Moderate](16_moderate)
 17. Hard
 
 ## References
